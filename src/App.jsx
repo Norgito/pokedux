@@ -9,8 +9,6 @@ import logo from "../src/assets/static/logo.svg";
 import "./App.css";
 
 const App = ({ pokemons, setPokemons }) => {
-  console.log("🚀 ~ file: App.jsx:12 ~ App ~ pokemons", pokemons)
-  
   useEffect(() => {
     const fetchPokemons = async () => {
       const pokemonsRes = await getPokemons();
