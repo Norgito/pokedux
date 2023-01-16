@@ -11,7 +11,7 @@ const PokemonCard = ({ name, stats }) => {
           cover={<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Ditto" />}
           extra={<StarOutlined/>}
       >
-      <Meta description={stats} />
+      <Meta description="fire, magic" />
     </Card>
   );
 };
