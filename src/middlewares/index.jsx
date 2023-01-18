@@ -5,17 +5,17 @@ export const logger = (store) => (next) => (action) => {
 
 // Add a personalized pokemon to the list
 
-/*export const featuring = (store) => (next) => (actionInfo) => {
+export const featuring = (store) => (next) => (actionInfo) => {
   const featured = [{ name: "diegotor" }, ...actionInfo.action.payload];
   const updatedActionInfo = {
     ...actionInfo,
     action: { ...actionInfo.action, payload: featured },
   };
   next(updatedActionInfo);
-};*/
+};
 
 // Add number to the list of pokemons
-/*export const number = (store) => (next) => (numberAction) => {
+export const number = (store) => (next) => (numberAction) => {
   const counted = numberAction.action.payload.map((pokemon, i) => ({
     ...pokemon,
     name: `${[i + 1]}. ${pokemon.name}`,
@@ -25,7 +25,7 @@ export const logger = (store) => (next) => (action) => {
     action: { ...numberAction.action, payload: counted },
   };
   next(updatedAction);
-};*/
+}
 
 //Add Capitalized letter to each pokemon name
 
