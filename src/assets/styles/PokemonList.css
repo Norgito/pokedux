@@ -9,7 +9,6 @@
 }
 
 .PokemonList img {
-    height: 150px;
     margin-top: 15px;
 }
 
@@ -21,12 +20,12 @@
 
 @media screen and (min-width: 1240px) {
     .PokemonList {
-        grid-template-columns: repeat(3, 350px);
+        grid-template-columns: repeat(3, 300px);
     }
 }
 
 @media screen and (min-width: 1680px) {
     .PokemonList {
-        grid-template-columns: repeat(4, 350px);
+        grid-template-columns: repeat(4, 300px);
     }
 }

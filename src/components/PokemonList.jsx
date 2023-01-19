@@ -12,7 +12,7 @@ const PokemonList = ({ pokemons }) => {
             types={poke.types}
             id={poke.id}
             favorite={poke.favorite}
-            image={poke.sprites.other.dream_world.front_default}
+            image={poke.sprites.other.home.front_default}
           />
         );
       })}
