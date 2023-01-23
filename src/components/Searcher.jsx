@@ -15,6 +15,7 @@ const Searcher = () => {
       placeholder="Buscar..."
       style={{ marginBottom: 15 }}
       onChange={handleSearch}
+      className=' dark:bg-slate-100  rounded-md '
     />
   );
 };

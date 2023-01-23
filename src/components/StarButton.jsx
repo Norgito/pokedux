@@ -3,7 +3,7 @@ import { StarFilled, StarOutlined } from '@ant-design/icons';
 
 const StarButton = ({ isFavorite, onClick }) => {
   const Icon = isFavorite ? StarFilled : StarOutlined;
-  return <Button icon={<Icon />} onClick={onClick} />;
+  return <Button icon={<Icon />} onClick={onClick} className='flex justify-center items-center' />;
 };
 
 export default StarButton;

@@ -9,7 +9,8 @@ import {
 } from "redux";
 import thunk from "redux-thunk";
 import { logger } from "./middlewares";
-import "./index.css";
+import { DarkMode } from './index'
+import "./main.css";
 import rootReducer from "./reducers/rootReducer";
 
 const composeAlt = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -21,7 +22,8 @@ const store = createStore(rootReducer, composedEnhancers);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <DarkMode />
+        <App />
     </Provider>
   </React.StrictMode>
 );

@@ -18,7 +18,8 @@ const PokemonCard = ({ name, image, types, id, favorite }) => {
     <Card
       title={name.toUpperCase()}
       cover={<img src={image} alt={name} />}
-      extra={<StarButton isFavorite={favorite} onClick={handleOnFavorite} />}
+      extra={<StarButton isFavorite={favorite} onClick={handleOnFavorite}
+      />}
     >
       <Meta description={typesString.toUpperCase()} />
     </Card>
