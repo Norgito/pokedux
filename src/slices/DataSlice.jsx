@@ -1,5 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getPokemonsGen1, getPokemonDetails} from "../api";
+import {
+  getGen1,
+  getGen2,
+  getGen3,
+  getGen4,
+  getGen5,
+  getPokemonDetails,
+} from "../api";
 import { setLoading } from "./uiSlice";
 
 const initialState = {
@@ -7,11 +14,11 @@ const initialState = {
   pokemonsFiltered: [],
 };
 
-export const fetchPokemonsWithDetails = createAsyncThunk(
+export const fetchPokemonsWithDetails1 = createAsyncThunk(
   "data/fetchPokemonsWithDetails",
   async (_, { dispatch }) => {
     dispatch(setLoading(true));
-    const pokemonsRes = await getPokemonsGen1();
+    const pokemonsRes = await getGen1();
     const pokemonsDetailed = await Promise.all(
       pokemonsRes.map((pokemon) => getPokemonDetails(pokemon))
     );
@@ -19,9 +26,54 @@ export const fetchPokemonsWithDetails = createAsyncThunk(
     dispatch(setLoading(false));
   }
 );
-
-
-
+export const fetchPokemonsWithDetails2 = createAsyncThunk(
+  "data/fetchPokemonsWithDetails",
+  async (_, { dispatch }) => {
+    dispatch(setLoading(true));
+    const pokemonsRes = await getGen2();
+    const pokemonsDetailed = await Promise.all(
+      pokemonsRes.map((pokemon) => getPokemonDetails(pokemon))
+    );
+    dispatch(setPokemons(pokemonsDetailed));
+    dispatch(setLoading(false));
+  }
+);
+export const fetchPokemonsWithDetails3 = createAsyncThunk(
+  "data/fetchPokemonsWithDetails",
+  async (_, { dispatch }) => {
+    dispatch(setLoading(true));
+    const pokemonsRes = await getGen3();
+    const pokemonsDetailed = await Promise.all(
+      pokemonsRes.map((pokemon) => getPokemonDetails(pokemon))
+    );
+    dispatch(setPokemons(pokemonsDetailed));
+    dispatch(setLoading(false));
+  }
+);
+export const fetchPokemonsWithDetails4 = createAsyncThunk(
+  "data/fetchPokemonsWithDetails",
+  async (_, { dispatch }) => {
+    dispatch(setLoading(true));
+    const pokemonsRes = await getGen4();
+    const pokemonsDetailed = await Promise.all(
+      pokemonsRes.map((pokemon) => getPokemonDetails(pokemon))
+    );
+    dispatch(setPokemons(pokemonsDetailed));
+    dispatch(setLoading(false));
+  }
+);
+export const fetchPokemonsWithDetails5 = createAsyncThunk(
+  "data/fetchPokemonsWithDetails",
+  async (_, { dispatch }) => {
+    dispatch(setLoading(true));
+    const pokemonsRes = await getGen5();
+    const pokemonsDetailed = await Promise.all(
+      pokemonsRes.map((pokemon) => getPokemonDetails(pokemon))
+    );
+    dispatch(setPokemons(pokemonsDetailed));
+    dispatch(setLoading(false));
+  }
+);
 
 export const dataSlice = createSlice({
   name: "data",
