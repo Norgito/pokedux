@@ -20,7 +20,7 @@ const DarkMode = () => {
     let icono = theme === 'light' ? <FaMoon color='black' size='1.5rem' /> : <FaSun color='white' size='1.7rem' />;
 
   return (
-    <div className="dark:bg-gray-800 bg-white flex pt-5 justify-end pr-80">
+    <div className="dark:bg-black bg-white flex pt-5 justify-end pr-80">
       <button onClick={handleThemeSwitch}>
         {icono}
       </button>

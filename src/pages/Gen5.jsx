@@ -20,7 +20,7 @@ const Gen5 = () => {
   }, []);
 
   return (
-    <div className="min-h-screen dark:bg-gray-800 bg-white text-center pt-4">
+    <div className="min-h-screen dark:bg-black bg-white text-center pt-4">
       <Header />
       {loading ? (
         <Col offset={0}>
